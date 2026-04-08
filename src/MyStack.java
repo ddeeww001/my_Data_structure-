@@ -14,6 +14,7 @@ public class MyStack {
         }else {
             top = top + 1;
             list[top] = x;
+            System.out.println("Push: ");
             return list[top];
         }
         return 0;
@@ -27,7 +28,23 @@ public class MyStack {
             int x = list[top];
             list[top] = 0;
             top = top - 1;
-
+            System.out.println("pop:"+x);
         }
+    }
+
+    public int getTop() {
+        return top;
+    }
+
+    public void setTop(int top) {
+        this.top = top;
+    }
+
+    public int[] getList() {
+        return list;
+    }
+
+    public void setList(int[] list) {
+        this.list = list;
     }
 }

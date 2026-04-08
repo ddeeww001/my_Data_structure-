@@ -15,13 +15,14 @@ public class Main {
         qq.deQueue();
         qq.deQueue();
        */
-        MyStack ss = new MyStack(3);
+        AdvStack ss = new AdvStack(3);
         ss.pop();
         ss.pop();
         System.out.println(ss.push(1));
         System.out.println(ss.push(1));
-        System.out.println(ss.push(1));
-        System.out.println(ss.push(1));
-        System.out.println(ss.push(1));
+        System.out.println(ss.push(2));
+        System.out.println(ss.push(3));
+        System.out.println(ss.peak());
+        ss.search(-1);
     }
 }

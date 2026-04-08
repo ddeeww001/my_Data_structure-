@@ -8,13 +8,13 @@ public class MyQueue {
         rear =-1;
         list = new int[size];
     }
-    public void enQueue(int x){
+    public void enQueue(Object x){
         if(((rear++)% list.length == front% list.length)&&(front > rear)) {
             System.out.println("Warning: Queue is full");
         }
         else {
             rear ++;
-            list[rear%list.length]=x;
+            list[rear%list.length]=(int)x;
         }
     }
     public int deQueue(){
