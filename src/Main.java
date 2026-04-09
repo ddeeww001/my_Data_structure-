@@ -6,6 +6,7 @@ public class Main {
         qq.enQueue(1);
         qq.enQueue(1);
         qq.enQueue(1);
+        qq.enQueue(3);
         qq.deQueue();
         qq.deQueue();
         qq.deQueue();
