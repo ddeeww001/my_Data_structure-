@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyQueue {
     private int front;
     private int rear;
@@ -11,7 +13,7 @@ public class MyQueue {
 
     public void enQueue(int x){
 
-        if((rear+1) - front > list.length) {
+        if((rear+1) - front >= list.length) {
             System.out.println("Warning: Queue is full");
         }
         else {
@@ -21,15 +23,13 @@ public class MyQueue {
         }
     }
     public int deQueue(){
-        if(rear == -1){
-            System.out.println("Warning: Queue is empty");
-        }else if(front > rear){
+        if((front > rear)&&(rear!= -1)){
             System.out.println("Warning: Queue is empty");
         }else {
             int temp = list[front % list.length];
             list[front] = 0;
             front++;
-            System.out.println("deQueue: "+temp);
+            System.out.println("deQueue: "+temp +" Front: "+front);
             return temp;
         }return 0;
     }

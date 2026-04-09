@@ -2,16 +2,35 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-       MyQueue qq = new MyQueue(3);
+       AdvQueue qq = new AdvQueue(3);
         qq.enQueue(1);
-        qq.enQueue(1);
-        qq.enQueue(1);
+        qq.enQueue(7);
+        qq.enQueue(4);
+        qq.enQueue(2);
+
+        qq.isFull();
+        qq.getFronts();
+        qq.getRears();
+        qq.getSize();
+
+        qq.search(1);
+        qq.search(7);
+        qq.search(4);
+        qq.search(0);
+
+        qq.deQueue();
+        qq.deQueue();
+        qq.deQueue();
+        qq.deQueue();
+        qq.deQueue();
+
+        qq.clear();
+        qq.getSize();
         qq.enQueue(3);
-        qq.deQueue();
-        qq.deQueue();
-        qq.deQueue();
-        qq.deQueue();
-        qq.deQueue();
+        qq.isFull();
+
+
+
 
         /*
         AdvStack ss = new AdvStack(3);

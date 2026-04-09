@@ -6,11 +6,13 @@ public class AdvQueue extends MyQueue{
     }
 
 
-    public void search(double number){
-        if ((!(number instanceof int))||((!Arrays.stream(getList()).anyMatch(x -> x == number)))){
+    public String search(double number){
+        if ((!(number instanceof int ))||(!(Arrays.stream(getList()).anyMatch(x -> x == number)))){
             System.out.println("FALSE");
+            return "FALSE";
         }else {
             System.out.println("TRUE");
+            return "TRUE";
         }
     }
 
@@ -21,15 +23,32 @@ public class AdvQueue extends MyQueue{
         System.out.println("Clear");
     }
 
-    public void doublePop(){
-        System.out.println("doublePop");
-        deQueue();
-        deQueue();
+    public int getSize(){
+        System.out.println("Size: "+getList().length);
+        return getList().length;
     }
 
-    public void doublePush(int x, int y){
-        enQueue(x);
-        enQueue(y);
-        System.out.println("doublePush: "+x+","+y);
+    public void isFull(){
+        if(getSize() == getList().length){
+            System.out.println("TRUE");
+        }else{
+            System.out.println("FALSE");
+        }
+    }
+
+
+    public int getFronts(){
+        int[] list = getList();
+        int temp = getFront();
+        temp = list[temp];
+        System.out.println("Front number: "+temp);
+        return temp;
+    }
+    public int getRears(){
+        int[] list = getList();
+        int temp = getRear();
+        temp = list[temp];
+        System.out.println("Rear number: "+temp);
+        return temp;
     }
 }
