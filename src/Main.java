@@ -2,51 +2,41 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-       AdvQueue qq = new AdvQueue(3);
-        qq.enQueue(1);
-        qq.enQueue(7);
-        qq.enQueue(4);
-        qq.enQueue(2);
 
-        qq.isFull();
-        qq.getFronts();
-        qq.getRears();
-        qq.getSize();
-
-        qq.search(1);
-        qq.search(7);
-        qq.search(4);
-        qq.search(0);
-
-        qq.deQueue();
-        qq.deQueue();
-        qq.deQueue();
-        qq.deQueue();
-        qq.deQueue();
-
-        qq.clear();
-        qq.getSize();
-        qq.enQueue(3);
-        qq.isFull();
-
-
-
-
-        /*
-        AdvStack ss = new AdvStack(3);
-        ss.pop();
-        ss.pop();
-        System.out.println(ss.push(1));
-        System.out.println(ss.push(1));
-        System.out.println(ss.push(2));
-        System.out.println(ss.push(3));
-        System.out.println(ss.peak());
-        ss.doublePop();
-        ss.search(-1);
-        ss.clear();
-        ss.doublePop();
-        ss.doublePop();
-        ss.doublePush(1,2);
-        */
+     AdvQueue AdvQueue1 = new AdvQueue(4);
+     System.out.println("enQueue 1 2 3 4 5");
+     AdvQueue1.enQueue(1);
+     AdvQueue1.enQueue(2);
+     AdvQueue1.enQueue(3);
+     AdvQueue1.enQueue(4);
+     AdvQueue1.enQueue(5); // insert more than queue size (overflow)
+     System.out.println("AdvQueue1.getSize()");
+     System.out.println(AdvQueue1.getSize()); // 4
+     System.out.println("AdvQueue1.deQueue()");
+     System.out.println(AdvQueue1.deQueue()); // 1
+     System.out.println("AdvQueue1.getFront()");
+     System.out.println(AdvQueue1.getFront()); // 2
+     System.out.println("AdvQueue1.search 0 1 3");
+     System.out.println(AdvQueue1.search(0)); // false
+     System.out.println(AdvQueue1.search(1)); // false
+     System.out.println(AdvQueue1.search(3)); // true
+     System.out.println("AdvQueue1.getSize()");
+     System.out.println(AdvQueue1.getSize()); // 3
+     System.out.println("clear");
+     AdvQueue1.clear();
+     System.out.println("AdvQueue1.search 0 1 3");
+     System.out.println(AdvQueue1.search(0)); // false
+     System.out.println(AdvQueue1.search(1)); // false
+     System.out.println(AdvQueue1.search(3)); // false
+     System.out.println("AdvQueue1.getSize()");
+     System.out.println(AdvQueue1.getSize()); // 0
+     System.out.println("enQueue 1 2 3");
+     AdvQueue1.enQueue(1);
+     AdvQueue1.enQueue(2);
+     AdvQueue1.enQueue(3);
+     System.out.println("AdvQueue1.getSize()");
+     System.out.println(AdvQueue1.getSize()); // 3
+     System.out.println("AdvQueue1.getRear()");
+     System.out.println(AdvQueue1.getRear()); // 3
     }
 }

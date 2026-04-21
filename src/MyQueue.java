@@ -1,9 +1,9 @@
 import java.util.Arrays;
 
 public class MyQueue {
-    private int front;
-    private int rear;
-    private int[] list;
+    protected int front;
+    protected int rear;
+    protected int[] list;
 
     public  MyQueue(int size){
         front=0;
@@ -29,13 +29,13 @@ public class MyQueue {
             int temp = list[front % list.length];
             list[front] = 0;
             front++;
-            System.out.println("deQueue: "+temp +" Front: "+front);
+           //System.out.println("deQueue: "+temp +" Front: "+front);
             return temp;
         }return 0;
     }
 
     public int getFront() {
-        return front;
+        return list[front];
     }
 
     public void setFront(int front) {
@@ -43,7 +43,7 @@ public class MyQueue {
     }
 
     public int getRear() {
-        return rear;
+        return list[rear];
     }
 
     public void setRear(int rear) {

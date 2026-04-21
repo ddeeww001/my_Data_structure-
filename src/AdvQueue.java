@@ -6,26 +6,27 @@ public class AdvQueue extends MyQueue{
     }
 
 
-    public String search(double number){
-        if ((!(number instanceof int ))||(!(Arrays.stream(getList()).anyMatch(x -> x == number)))){
-            System.out.println("FALSE");
-            return "FALSE";
-        }else {
-            System.out.println("TRUE");
-            return "TRUE";
-        }
+    public String search(int number){
+        for(int i = front; i<=rear; i++){
+            if(list[i% list.length]==number){
+                return "true";
+            }
+        }return "false";
+
     }
 
     public void clear(){
         int[] l = getList();
         Arrays.fill(l,0);//คำสั่งให้ทุกข้อมูลเปลี่ยนเป็น 0 ใน Array โดยไม่ลบ length
         setList(l);
+        front = 0;
+        rear = -1;
         System.out.println("Clear");
     }
 
     public int getSize(){
-        System.out.println("Size: "+getList().length);
-        return getList().length;
+       // System.out.println("Size: "+getList().length);
+        return rear-front+1;
     }
 
     public void isFull(){
@@ -41,14 +42,14 @@ public class AdvQueue extends MyQueue{
         int[] list = getList();
         int temp = getFront();
         temp = list[temp];
-        System.out.println("Front number: "+temp);
+        //System.out.println("Front number: "+temp);
         return temp;
     }
     public int getRears(){
         int[] list = getList();
         int temp = getRear();
         temp = list[temp];
-        System.out.println("Rear number: "+temp);
+        //System.out.println("Rear number: "+temp);
         return temp;
     }
 }
