@@ -28,7 +28,7 @@ public class AdvStack extends MyStack {
     }
 
     public void doublePop(){
-        System.out.println("doublePop");
+        //System.out.println("double Pop");
         pop();
         pop();
     }
@@ -36,7 +36,7 @@ public class AdvStack extends MyStack {
     public void doublePush(int x, int y){
         push(x);
         push(y);
-        System.out.println("doublePush: "+x+","+y);
+        //System.out.println("doublePush: "+x+","+y);
     }
 
 }

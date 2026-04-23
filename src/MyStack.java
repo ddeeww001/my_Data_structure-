@@ -1,4 +1,3 @@
-
 public class MyStack {
     private int top=-1;
     private int[] list;
@@ -14,21 +13,22 @@ public class MyStack {
         }else {
             top = top + 1;
             list[top] = x;
-            System.out.println("Push: ");
+            System.out.println("Push");
             return list[top];
         }
         return 0;
     }
 
-    public void pop()
+    public int pop()
     {
         if(top <= -1){
             System.out.println("Warning: Stack is empty");
+            return 0;
         }else {
             int x = list[top];
             list[top] = 0;
             top = top - 1;
-            System.out.println("pop:"+x);
+            return x;
         }
     }
 
