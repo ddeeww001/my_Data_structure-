@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package QS;
 
 public class MyQueue {
     protected int front;

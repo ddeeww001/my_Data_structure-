@@ -1,3 +1,5 @@
+package QS;
+
 public class MyStack {
     private int top=-1;
     private int[] list;

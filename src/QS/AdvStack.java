@@ -1,3 +1,5 @@
+package QS;
+
 import java.util.Arrays;
 
 public class AdvStack extends MyStack {

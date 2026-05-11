@@ -1,6 +1,8 @@
+package QS;
+
 import java.util.Arrays;
 
-public class AdvQueue extends MyQueue{
+public class AdvQueue extends MyQueue {
     public AdvQueue(int size) {
         super(size);
     }
