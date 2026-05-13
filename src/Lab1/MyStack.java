@@ -1,4 +1,4 @@
-package QS;
+package Lab1;
 
 public class MyStack {
     private int top=-1;

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Question2_Stack {
+public class Question1_Stack {
     public static void main(String[] args) {
         java.util.Stack<Integer> mystack =new java.util.Stack<>();
         Scanner sc=new Scanner(System.in);

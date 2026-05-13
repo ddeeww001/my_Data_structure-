@@ -1,4 +1,4 @@
-package LinkList;
+package Lab2;
 
 public class EnhancedLinkedList extends BasicLinkedList {
     private MyNode current;

@@ -1,4 +1,4 @@
-package QS;
+package Lab1;
 
 import java.util.Arrays;
 
