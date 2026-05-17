@@ -1,0 +1,5 @@
+<dependency>
+    <groupId>org.free</groupId>
+    <artifactId>TeeChart</artifactId>
+    <version>1.5.4</version>
+</dependency>
