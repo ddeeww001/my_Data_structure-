@@ -67,9 +67,9 @@ public class Q4 {
 
     Q5
     Questions |Big O
-    allQ        | 1
-    Q2        | 1
-    Q3        | n
+    Q1        | 1
+    Q2        | n
+    Q3        | n^2
     Q4        | n^3
         */
 }
