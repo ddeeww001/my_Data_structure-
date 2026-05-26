@@ -4,22 +4,14 @@ import java.util.Scanner;
 public class AssignmentQ8 {
 
     public static void printPairs(int[] arr, int i, int j) {
-        // Base Case 1: หากตัวตั้งหลักวิ่งจนสุดอาเรย์แล้ว -> จบการทำงาน
         if (i >= arr.length) {
             return;
         }
-
-        // Base Case 2: หากตัวจับคู่ j วิ่งไปจนสุดอาเรย์ -> ให้ขยับตัวตั้งหลัก i ไปตัวถัดไป
-        // และให้ j เริ่มต้นที่ตำแหน่ง i + 1 เสมอเพื่อไม่ให้ซ้ำคู่เดิม
         if (j >= arr.length) {
             printPairs(arr, i + 1, i + 2);
             return;
         }
-
-        // พิมพ์ผลลัพธ์จับคู่ในปัจจุบัน
         System.out.print("{" + arr[i] + "," + arr[j] + "} ");
-
-        // ขยับตัวจับคู่ j ไปตัวถัดไป (ขยับลูปใน)
         printPairs(arr, i, j + 1);
     }
 
@@ -36,10 +28,15 @@ public class AssignmentQ8 {
         }
 
         System.out.print("Output will be: ");
-        // เรียกใช้ฟังก์ชัน เริ่มต้นคู่แรกที่ index i=0 และ j=1
         printPairs(input, 0, 1);
-        System.out.println(); // ขึ้นบรรทัดใหม่เมื่อเสร็จสิ้น
+        System.out.println();
 
         scanner.close();
-    }
+    }/*
+Enter the length of the input: 3
+Enter #1 integer: 3
+Enter #2 integer: 2
+Enter #3 integer: 1
+Output will be: {3,2} {3,1} {2,1}
+*/
 }

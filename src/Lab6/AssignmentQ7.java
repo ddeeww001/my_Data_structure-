@@ -18,7 +18,6 @@ public class AssignmentQ7 {
 
         int n = 0;
         for (String word : words) {
-            // เรียกฟังก์ชันโดยส่งค่าเริ่มต้น left = 0 และ right = ตัวสุดท้ายของคำ
             boolean result = isPalindrome(word, 0, word.length() - 1);
             System.out.println("["+n+"]"+ word + "-> " + result);
             n++;
