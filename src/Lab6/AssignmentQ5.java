@@ -1,52 +1,40 @@
 package Lab6;
 
 public class AssignmentQ5 {
-    int[] data = {10,1000,100000};
-
-    public int forLoop(int dataNum){
-        int arr = 0;
-        for(int i =0; i< dataNum;i++){
-            arr++;
+    static int[] allNum = {10, 20, 1, 31, 2, -14, 13};
+    public static int minRecursion(int min, int index) {
+        if (index < 0) {
+            return min;
         }
-        return arr;
+        if (allNum[index] < min) {
+            min = allNum[index];
+        }
+        return minRecursion(min, index - 1);
     }
 
-    public void recursion(int dataNum){
-            if ( 0 > dataNum) {
-                return;
-            }
-            recursion(dataNum-1);
+    public static int minLoop(int min,int index){
+    for(int i = 0; i >= index ; i++) {
+        if (allNum[i] < min) {
+            min = allNum[i];
+        }
+    }
+    return min;
     }
 
-    public void main(String[]args){
-        System.out.println("For loop:");
-        for(int i=0;i<data.length;i++) {
-            long timeIn1 = System.currentTimeMillis();
-            forLoop(data[i]);
-            long timeOut1 =  System.currentTimeMillis();
 
-            System.out.println("["+i+"]"+(timeOut1-timeIn1));
-        }
+    public static void main(String[] args) {
 
-        System.out.println("Recursion: ");
-        for(int i=0;i<data.length;i++) {
-            long timeIn2 = System.currentTimeMillis();
-            recursion(data[i]);
-            long timeOut2 =  System.currentTimeMillis();
+        //long startTime = System.currentTimeMillis();
+        int lastIndex = allNum.length - 1;
+        int result1 = minRecursion(allNum[lastIndex], lastIndex);
+        //long endTime = System.currentTimeMillis();
 
-            System.out.println("["+i+"]"+(timeOut2-timeIn2));
-        }
+        int result2 = minRecursion(allNum[lastIndex], lastIndex);
+
+        System.out.println("return min : " + result1);
+        System.out.println("return min : " + result2);
+        //System.out.println("Time taken: " + (endTime - startTime) + " ms");
+
 
     }
-    /*
-    For loop:
-            [0]0
-            [1]0
-            [2]0
-    Recursion:
-            [0]0
-            [1]0
-    Exception in thread "main" java.lang.StackOverflowError
-    */
-
 }

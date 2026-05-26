@@ -1,15 +1,8 @@
 package Lab6;
-
 import java.util.Scanner;
 
 public class AssignmentQ8 {
 
-    /**
-     * ฟังก์ชัน Recursion สำหรับพิมพ์คู่เอาต์พุต
-     * @param arr อาเรย์ข้อมูล
-     * @param i ดัชนีตัวตั้งหลัก (เปรียบเหมือนลูปนอก)
-     * @param j ดัชนีตัวที่นำมาจับคู่ (เปรียบเหมือนลูบใน)
-     */
     public static void printPairs(int[] arr, int i, int j) {
         // Base Case 1: หากตัวตั้งหลักวิ่งจนสุดอาเรย์แล้ว -> จบการทำงาน
         if (i >= arr.length) {
