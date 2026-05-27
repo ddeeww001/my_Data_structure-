@@ -23,7 +23,7 @@ public class AssignmentQ8 {
 
         int[] input = new int[length];
         for (int i = 0; i < length; i++) {
-            System.out.print("Enter #" + (i + 1) + " integer: ");
+            System.out.print("Enter: " + (i + 1) + " integer: ");
             input[i] = scanner.nextInt();
         }
 
