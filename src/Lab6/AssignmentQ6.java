@@ -2,45 +2,37 @@ package Lab6;
 
 public class AssignmentQ6 {
     public void main(String[]args){
-        int[] allNum = {-3,0,1,30,40};
-        for (int i=0;i<allNum.length;i++){
-            long start1 = System.currentTimeMillis();
-            int num1 = fibonacciRecursion(allNum[i]);
-            long end1 = System.currentTimeMillis();
-            System.out.println("["+i+"]"+(end1-start1)+" recursion ->"+num1);
-        }
-        System.out.println();
-        /*
-        ----fibonacciRecursion----
-        [0]0 recursion ->1
-        [1]0 recursion ->55
-        [2]360 recursion ->102334155
-        */
+        int allNum = 10;
 
-        for (int i=0;i<allNum.length;i++) {
-            long start2 = System.currentTimeMillis();
-            int num2 = fibonacciLoop(allNum[i]);
-            long end2 = System.currentTimeMillis();
-            System.out.println("[" + i + "]" + (end2 - start2) + " For loop ->" + num2);
+            printFibonacciRecursive(0,allNum);
+
+        System.out.println();
+
+           // System.out.println(fibonacciLoop(allNum));
         }
-        /*
-        [0]0 For loop ->-3
-        [1]0 For loop ->0
-        [2]0 For loop ->1
-        [3]0 For loop ->832040
-        [4]0 For loop ->102334155
-        */
+
+
+
+
+    public static int fibonacciRecursion(int index) {
+        if (index <= 0) {
+            return 0;
+        } else if (index == 1) {
+            return 1;
+        } else {
+            return fibonacciRecursion(index - 1) + fibonacciRecursion(index - 2);
+        }
     }
 
-    public int fibonacciRecursion(int index){
-        if(index < 0){
-            return index;
-        }else if(index == 0){
-            return 0;
-        }else if(index == 1){
-            return 1;
-        }else {
-         return fibonacciRecursion(index - 1) + fibonacciRecursion(index - 2);}
+    // 2. ฟังก์ชันแสดงผลลัพธ์ (ใช้ Recursion แทนการใช้ for loop)
+    // รับค่า current (ตำแหน่งปัจจุบัน) และ end (ตำแหน่งสุดท้ายที่ต้องการพิมพ์)
+    public static void printFibonacciRecursive(int current, int end) {
+        // Base Case: ถ้าตำแหน่งปัจจุบัน เกิน ตำแหน่งสุดท้าย ให้หยุดการทำงาน
+        if (current > end) {
+            return;
+        }
+        System.out.print(fibonacciRecursion(current) + " ");
+        printFibonacciRecursive(current + 1, end);
     }
 
     public int fibonacciLoop(int index) {
@@ -58,6 +50,7 @@ public class AssignmentQ6 {
                 current = num1 + num2;
                 num2 = num1;
                 num1 = current;
+                System.out.print(current+" ");
             }
         }return current;
     }
