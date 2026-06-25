@@ -33,8 +33,3 @@ public class q2 {
     }
 
 }
-/*
-q3 bid O log n
-q4 big O n
-q5
- */
