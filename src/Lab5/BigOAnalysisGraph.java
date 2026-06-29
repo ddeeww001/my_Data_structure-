@@ -1,24 +1,24 @@
 package Lab5;
 
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.axis.NumberAxis;
-import org.jfree.chart.plot.CombinedDomainXYPlot;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
-import org.jfree.data.xy.XYSeries;
-import org.jfree.data.xy.XYSeriesCollection;
-import org.jfree.ui.ApplicationFrame;
-import org.jfree.ui.RefineryUtilities;
+//import org.jfree.chart.ChartFactory;
+//import org.jfree.chart.ChartPanel;
+//import org.jfree.chart.JFreeChart;
+//import org.jfree.chart.axis.NumberAxis;
+//import org.jfree.chart.plot.CombinedDomainXYPlot;
+//import org.jfree.chart.plot.PlotOrientation;
+//import org.jfree.chart.plot.XYPlot;
+//import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+//import org.jfree.data.xy.XYSeries;
+//import org.jfree.data.xy.XYSeriesCollection;
+//import org.jfree.ui.ApplicationFrame;
+//import org.jfree.ui.RefineryUtilities;
+//
+//import javax.swing.*;
+//import java.awt.*;
 
-import javax.swing.*;
-import java.awt.*;
+public class BigOAnalysisGraph /*extends ApplicationFrame*/ {
 
-public class BigOAnalysisGraph extends ApplicationFrame {
-
-    public BigOAnalysisGraph(String title) {
+    /*public BigOAnalysisGraph(String title) {
         super(title);
         JFreeChart combinedChart = createChartFromOriginalCode();
         ChartPanel panel = new ChartPanel(combinedChart);
@@ -163,5 +163,5 @@ public class BigOAnalysisGraph extends ApplicationFrame {
             demo.setVisible(true);
             demo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         });
-    }
+    }*/
 }
