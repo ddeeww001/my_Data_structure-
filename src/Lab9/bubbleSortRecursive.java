@@ -54,14 +54,14 @@ public class bubbleSortRecursive {
 
 
 
-
-    public static void main(String[] args) {
-        int[]a= {64, 34, 25, 12, 22, 11, 90};
-        bubbleSortRecursive.bubbleSort(a);
-        for (int i=0;i<a.length;i++){
-            System.out.print(a[i]+" ");
-        }
-
-    }
+//
+//    public static void main(String[] args) {
+//        int[]a= {64, 34, 25, 12, 22, 11, 90};
+//        bubbleSortRecursive.bubbleSort(a);
+//        for (int i=0;i<a.length;i++){
+//            System.out.print(a[i]+" ");
+//        }
+//
+//    }
 
 }

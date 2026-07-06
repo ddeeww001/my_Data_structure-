@@ -18,7 +18,7 @@ public class random {
                 int x = random.nextInt(List1.size());
                 int num = i-1;
                 a[num] = x;
-                System.out.println("[" + count + "]" + a[num]);
+                //System.out.println("[" + count + "]" + a[num]);
                 count = count + 1;
            // }
 
@@ -29,7 +29,8 @@ public class random {
 
     public static void main(String[] args) {
         System.out.println("Question 1| Random");
-        nodup_array(100);
+
+        nodup_array(1000);
 
 
     }
