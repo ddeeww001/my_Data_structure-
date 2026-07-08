@@ -44,6 +44,10 @@ public class main {
         }
 
         System.out.println("\n----Q2-7----");
-
+        List<Node> ListRev = root.get_reverse_back_track(nodeA);
+        for (Node n:ListRev) {
+            System.out.print(n.get_value()+"->");
+        }
+        System.out.println("");
     }
 }
